@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Notify') {
       steps {
-        hipchatSend credentialId: "hipchat-token" room: "ok-jenkins", message: "Build finished: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
+        hipchatSend credentialId: "hipchat-token", room: "ok-jenkins", message: "Build finished: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
       }
     }
   }
