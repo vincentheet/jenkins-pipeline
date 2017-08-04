@@ -12,9 +12,17 @@ pipeline {
     }
   }
   stages {
-    stage('Run maven') {
+    stage('Step 1: versions') {
       steps {
         sh 'mvn -version'
+      }
+      steps {
+        sh 'java -version'
+      }
+    }
+    stage('Step 2') {
+      steps {
+        echo 'Hello World'
       }
     }
   }
